@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int sum_from_to(int first, int last);
+int main() {
+
+	int answer;
+	answer = sum_from_to(5, 5);
+	cout << answer;
+
+}
+
+int sum_from_to (int first, int last)
+{
+	int i, partial_sum = 0;
+
+	if (first <= last)
+		for (i = first; i <= last; ++i)
+			partial_sum += i;
+
+	else
+		for (i = first; i >= last; --i)
+			partial_sum += i;
+
+	return partial_sum;
+
+}
