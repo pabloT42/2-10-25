@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int enough(int goal);
+int main() {
+
+	int answer;
+	answer = enough(1);
+	cout << answer;
+
+}
+
+
+
+int enough(int goal)
+{
+	int n = 1, sum = 1;
+
+	while (sum < goal)
+		sum += ++n;
+
+	return n;
+
+}
